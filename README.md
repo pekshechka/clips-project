@@ -1,8 +1,8 @@
-# clips-project
+# Clips project MADE 2022
+Красивое описание
 
 # Описание датасета
 
-root
  <br />|-- clip_id: integer - уникальный айди клипа
  <br />|-- owner_id: integer - уникальный айди автора
  <br />|-- clipContentCategory: string - категория клипа (лейбл)
