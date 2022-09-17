@@ -6,7 +6,7 @@
  <br />|-- clip_id: integer - уникальный айди клипа
  <br />|-- owner_id: integer - уникальный айди автора
  <br />|-- clipContentCategory: string - категория клипа (лейбл)
- <br />|-- date: string - дата создания
+ <br />|-- date: string - дата создания. Клипы после 2022-07-20 отложены для теста
  <br />|-- contentAudioEmbedding: array - вектор клипа по нарезке кадров, размерность 1024
  <br />|    |-- element: float 
  <br />|-- contentEmbedding: array - вектор клипа по аудио (используется для определения трека), размерность 128
