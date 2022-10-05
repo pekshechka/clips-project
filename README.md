@@ -7,9 +7,9 @@
  <br />|-- owner_id: integer - уникальный айди автора
  <br />|-- clipContentCategory: string - категория клипа (лейбл)
  <br />|-- date: string - дата создания. Клипы после 2022-07-20 отложены для теста
- <br />|-- contentAudioEmbedding: array - вектор клипа по нарезке кадров, размерность 1024
+ <br />|-- contentAudioEmbedding: array -  вектор клипа по аудио (используется для определения трека), размерность 128
  <br />|    |-- element: float 
- <br />|-- contentEmbedding: array - вектор клипа по аудио (используется для определения трека), размерность 128
+ <br />|-- contentEmbedding: array - вектор клипа по нарезке кадров, размерность 1024
  <br />|    |-- element: float 
  <br />|-- AUTOTAG_max_proba_sum: map - автотэггер: классы с максимальной суммой вероятностей по всем кадрам (топ-10 при условии >= 0.1)
  <br />|    |-- key: string
