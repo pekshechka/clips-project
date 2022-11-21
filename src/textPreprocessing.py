@@ -4,10 +4,16 @@
 
 import sys
 import os
-import wget
 import re
+
+from tqdm import tqdm
+import numpy as np
+import pandas as pd
+import wget
+
 from ufal.udpipe import Model, Pipeline
 import nltk
+
 
 nltk.download("stopwords")
 from nltk.corpus import stopwords
@@ -245,12 +251,26 @@ def tag_ud(
 
     print("Processing input...", file=sys.stderr)
     res = []
-    for line in text.split("\n"):
+    for line in tqdm(text.split("\n")):
         # line = unify_sym(line.strip()) # здесь могла бы быть ваша функция очистки текста
         line = only_word_and_cifr(line.strip())
         output = process(process_pipeline, text=line)
         res.append(output)
     return res
+
+
+def take_embedding_of_sentence(word_list, wv_dict):
+    res = []
+    for word in word_list:
+        if word in wv_dict:
+            res.append(wv_dict[word])
+    return np.array(res)
+
+
+def take_mean_emb(embeddings, weights):
+    weights = weights / weights.sum()  # works only with non negative weights
+    res = embeddings * weights.reshape(-1, 1)
+    return res.sum(axis=0)
 
 
 if __name__ == "__main__":
