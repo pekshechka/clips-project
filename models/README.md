@@ -25,3 +25,5 @@ Query per second: 0.37010889342336944, recall: 0.9000403594174406, num searches:
 Query per second: 0.37309495676819554, recall: 0.9068584250355932, num searches: 400  
 Query per second: 0.38875049498862174, recall: 0.9337387661747365, num searches: 1000  
 Query per second: 0.4007463933413507, recall: 0.959333797907211, num searches: 2000  
+
+![ANN](plot.jpg)
